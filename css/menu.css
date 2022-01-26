@@ -23,6 +23,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+
+.hero-with-background__border-box {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    border: 5px solid var(--nitro-blue);
+    min-width: 17.5rem;
+    max-width: 18.75rem;
+    min-height: 11.25rem;
+    max-height: 12.5rem;
+    box-sizing: border-box;
 }
 
 .hero-with-background__heading {
