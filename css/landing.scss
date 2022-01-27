@@ -1,10 +1,14 @@
+@use 'partials/global';
+@use 'partials/colors';
+
+
 /* ############ shared ############# */
 
 .hero__link-button,
 .our-products__link-button,
 .were-different__link-button {
-    color: var(--neutral-white);
-    border: 2px solid var(--neutral-graphite);
+    color: colors.$neutral-white;
+    border: 2px solid colors.$neutral-graphite;
     margin: 0;
     text-decoration: none;
     text-transform: uppercase;
@@ -16,6 +20,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    
 }
 
 .hero__link-container-border-box,
@@ -25,7 +30,7 @@
     top: 5px;
     left: 5px;
     border: none;
-    background-color: var(--nitro-blue);
+    background-color: colors.$nitro-blue;
     width: 11.25rem;
     height: 4rem;
 }
@@ -44,7 +49,7 @@
 /* ############ hero ############# */
 
 .hero {
-    background-color: var(--nitro-pink);
+    background-color: colors.$nitro-pink;
     padding: 2.5rem 7.5rem;
     display: flex;
     flex-wrap: wrap;
@@ -79,7 +84,7 @@
 /* ############ our-products ############# */
 
 .our-products {
-    background-color: var(--neutral-light-gray);
+    background-color: colors.$neutral-light-gray;
     margin: 0;
     padding: 3.75rem 7.5rem;
 }
@@ -109,7 +114,7 @@
     flex-direction: column;
     justify-content: flex-end;
     margin-bottom: 2.5rem;
-    background-color: var(--neutral-white);
+    background-color: colors.$neutral-white;
     box-shadow: 0 5px 9px -1px rgba(0, 0, 0, 0.25);
     /* padding: 2.5rem 0 0 0; */
     overflow: hidden;
@@ -117,7 +122,7 @@
 }
 
 .our-products__product-info {
-    background-color: var(--nitro-pink);
+    background-color: colors.$nitro-pink;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -139,7 +144,7 @@
 
 .our-products__product-description {
     margin: 0;
-    color: var(--neutral-gray);
+    color: colors.$neutral-gray;
     font-size: 1.125rem;
 }
 
@@ -147,7 +152,7 @@
 .our-products__product-price {
     font-size: 2.0625rem;
     margin: 0;
-    color: var(--nitro-blue);
+    color: colors.$nitro-blue;
     font-weight: 700;
 }
 
@@ -218,7 +223,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 5px solid var(--nitro-blue);
+    border: 5px solid colors.$nitro-blue;
 }
 
 .were-different__image {
@@ -229,7 +234,7 @@
     position: absolute;
     top: 1rem;
     left: 1rem;
-    /* border: 5px solid var(--nitro-blue); */
+    /* border: 5px solid colors.$nitro-blue; */
     background-image: url(../assets/images/coldbrewbackground.png);
     background-position: center center;
     background-size: cover;
@@ -248,7 +253,7 @@
 }
 
 .discount__container {
-    background-color: var(--neutral-graphite);
+    background-color: colors.$neutral-graphite;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -259,7 +264,7 @@
     padding: 2.5rem;
     font-size: 2.8125rem;
     font-weight: 400;
-    color: var(--neutral-white);
+    color: colors.$neutral-white;
 } 
 
 .discount__details--bold {

@@ -1,13 +1,6 @@
-/* ############ site ############# */
+@use 'colors';
 
-:root {
-    --nitro-blue: #5BACC3;
-    --nitro-pink: #FFF0ED;
-    --neutral-graphite: #393939;
-    --neutral-light-gray: #F7F7F7;
-    --neutral-gray: #909090;
-    --neutral-white: #FFF;
-}
+/* ############ site ############# */
 
 html {
     font-size: 16px;
@@ -16,7 +9,7 @@ html {
 body {
     font-family: 'Open Sans';
     font-weight: 400;
-    color: var(--neutral-graphite);
+    color: colors.$neutral-graphite;
     margin: 0;
 }
 
@@ -26,7 +19,7 @@ body {
 /* ############ main-nav ############# */
 
 .main-nav {
-    background-color: var(--nitro-pink);
+    background-color: colors.$nitro-pink;
     padding: 0.75rem 0;
     display: flex;
     justify-content: space-between;
@@ -53,7 +46,7 @@ body {
 
 .main-nav__heading-link {
     text-decoration: none;
-    color: var(--neutral-graphite);
+    color: colors.$neutral-graphite;
 }
 .main-nav__list {
     display: flex;
@@ -72,11 +65,11 @@ body {
 .main-nav__list-item-link {
     text-decoration: none;
     margin: 1.25rem;
-    color: var(--neutral-graphite);
+    color: colors.$neutral-graphite;
 } 
 
 .main-nav__list-item-link--active {
-    color: var(--nitro-blue);
+    color: colors.$nitro-blue;
     text-decoration: none;
     margin: 1.25rem;
 } 
@@ -87,7 +80,7 @@ body {
 /* ############ main-footer ############# */
 
 .main-footer {
-    background-color: var(--nitro-pink);
+    background-color: colors.$nitro-pink;
     position: relative;
     overflow: hidden;
 
