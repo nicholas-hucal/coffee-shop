@@ -1,6 +1,5 @@
-@use 'partials/global';
-@use 'partials/colors';
-
+@use './partials/global' as *;
+@use './partials/colors' as *;
 
 /* ############ hero-with-background ############# */
 

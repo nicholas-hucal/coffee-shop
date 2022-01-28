@@ -1,6 +1,5 @@
-@use 'partials/global';
-@use 'partials/colors';
-
+@use './partials/global' as *;
+@use './partials/colors' as *;
 
 /* ############ shared ############# */
 
@@ -20,7 +19,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    
+
 }
 
 .hero__link-container-border-box,
@@ -224,10 +223,6 @@
     justify-content: center;
     align-items: center;
     border: 5px solid colors.$nitro-blue;
-}
-
-.were-different__image {
-    /* padding: 3rem 7.5rem; */
 }
 
 .were-different__image-border-box {
