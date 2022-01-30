@@ -7,13 +7,13 @@
     height: 37.5rem;
     width: 100%;
     text-align: center;
-    @include flex-center-row;
+    @include flex-row(center);
     align-items: center;
     &__heading-container {
         width: 18.75rem;
         height: 12.5rem;
         background-color: $neutral-graphite;
-        @include flex-center-row;
+        @include flex-row(center);
         align-items: center;
         position: relative;
     }
@@ -40,7 +40,7 @@
     width: 100%;
     background-color: $neutral-graphite;
     &__list {
-        @include flex-center-row;
+        @include flex-row(center);
         list-style-type: none;
         font-size: 1.3125rem;
         margin: 0;
