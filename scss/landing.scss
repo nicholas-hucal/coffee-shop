@@ -1,13 +1,8 @@
 @use './partials/global' as *;
-@use './partials/colors' as *;
-
 /* ############ shared ############# */
-
-.hero__link-button,
-.our-products__link-button,
-.were-different__link-button {
-    color: colors.$neutral-white;
-    border: 2px solid colors.$neutral-graphite;
+.site-link-button {
+    color: $neutral-white;
+    border: 2px solid $neutral-graphite;
     margin: 0;
     text-decoration: none;
     text-transform: uppercase;
@@ -19,256 +14,197 @@
     position: absolute;
     top: 0;
     left: 0;
-
 }
-
-.hero__link-container-border-box,
-.our-products__link-container-border-box,
-.were-different__link-container-border-box {
+.site-link-container-border-box {
     position: absolute;
     top: 5px;
     left: 5px;
     border: none;
-    background-color: colors.$nitro-blue;
+    background-color: $nitro-blue;
     width: 11.25rem;
     height: 4rem;
 }
-
-.hero__link-container,
-.our-products__link-container,
-.were-different__link-container {
+.site-link-container {
     position: relative;
     height: 4rem;
     display: inline-block;
 }
-
 /* ############ shared end ############# */
 
-
 /* ############ hero ############# */
-
 .hero {
-    background-color: colors.$nitro-pink;
+    background-color: $nitro-pink;
     padding: 2.5rem 7.5rem;
-    display: flex;
+    @extend .flex-space-between-row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    &__link-button {
+        @extend .site-link-button;
+    }
+    &__link-container-border-box {
+        @extend .site-link-container-border-box;
+    }
+    &__link-container {
+        @extend .site-link-container;
+    }
+    &__details {
+        max-width: 35%;
+        vertical-align: top;
+        margin-top: 5rem;
+    }
+    &__heading {
+        margin: 0;
+    }
+    &__body {
+        margin-bottom: 2.5rem;
+    }
+    &__image-container {
+        text-align: right;
+        width: 60%; 
+    }
 }
-
-.hero__details {
-    max-width: 35%;
-    vertical-align: top;
-    margin-top: 5rem;
-}
-
-.hero__heading {
-    font-size: 3.75rem;
-    font-weight: 300;
-    margin: 0;
-}
-
-.hero__body {
-    font-size: 1.125rem;
-    margin-bottom: 2.5rem;
-}
-
-.hero__image-container {
-    text-align: right;
-    width: 60%; 
-}
-
 /* ############ hero end ############# */
 
-
 /* ############ our-products ############# */
-
 .our-products {
-    background-color: colors.$neutral-light-gray;
+    background-color: $neutral-light-gray;
     margin: 0;
     padding: 3.75rem 7.5rem;
+    &__link-button {
+        @extend .site-link-button;
+    }
+    &__link-container-border-box {
+        @extend .site-link-container-border-box;
+    }
+    &__link-container {
+        @extend .site-link-container;
+    }
+    &__heading {
+        text-align: center;
+        margin: 0;
+    }
+    &__product-card-container {
+        @extend .flex-space-between-row;
+        flex-wrap: wrap;
+        margin: 2.5rem 0;
+    }
+    &__product-card {
+        width: 30%;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        @extend .flex-column;
+        justify-content: flex-end;
+        margin-bottom: 2.5rem;
+        background-color: $neutral-white;
+        box-shadow: 0 5px 9px -1px rgba(0, 0, 0, 0.25);
+        overflow: hidden;
+    }
+    &__product-info {
+        background-color: $nitro-pink;
+        @extend .flex-space-between-row;
+        align-items: center;
+        padding: 2.5rem 1.25rem;
+    }
+    &__product-details {
+        @extend .flex-column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    &__product-heading {
+        margin: 0;
+    }
+    &__product-description {
+        margin: 0;
+        color: $neutral-gray;
+    }
+    &__product-price {
+        margin: 0;
+        color: $nitro-blue;
+        font-size: 2.0625rem;
+        @extend .bold;
+    }
+    &__product-image-container {
+        @extend .flex-center-row;
+    }
+    &__product-image {
+        height: 17rem;
+        padding-bottom: 2.5rem;
+        padding-top: 1rem;
+    }
+    &__link-container {
+        margin-left: calc(50% - 5rem);
+    }
 }
-
-.our-products__heading {
-    font-size: 3.75rem;
-    font-weight: 300;
-    text-align: center;
-    margin: 0;
-}
-
-.our-products__product-card-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 2.5rem 0;
-}
-
-.our-products__product-card {
-    min-width: 330px;
-    max-width: 350px;
-    min-height: 440px;
-    max-height: 460px;
-    border: 1px solid #fff;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    margin-bottom: 2.5rem;
-    background-color: colors.$neutral-white;
-    box-shadow: 0 5px 9px -1px rgba(0, 0, 0, 0.25);
-    /* padding: 2.5rem 0 0 0; */
-    overflow: hidden;
-
-}
-
-.our-products__product-info {
-    background-color: colors.$nitro-pink;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2.5rem 1.25rem;
-}
-
-.our-products__product-details {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.our-products__product-heading {
-    font-size: 2.0625rem;
-    font-weight: 300;
-    margin: 0;
-}
-
-.our-products__product-description {
-    margin: 0;
-    color: colors.$neutral-gray;
-    font-size: 1.125rem;
-}
-
-
-.our-products__product-price {
-    font-size: 2.0625rem;
-    margin: 0;
-    color: colors.$nitro-blue;
-    font-weight: 700;
-}
-
-.our-products__product-image-container {
-    display: flex;
-    justify-content: center;
-}
-
-.our-products__product-image {
-    min-height: 240px;
-    max-height: 550px;
-    padding-bottom: 2.5rem;
-}
-
-.our-products__link-container {
-    margin-left: calc(50% - 5rem);
-    /* text-align: center; */
-}
-
 /* ############ our-products end ############# */
 
-
 /* ############ were-different ############# */
-
-
 .were-different {
-    display: flex;
-    justify-content: space-between;
+    @extend .flex-space-between-row;
     align-items: center;
     margin: 7.5rem 7.5rem 0 7.5rem;
+    &__link-button {
+        @extend .site-link-button;
+    }
+    &__link-container-border-box {
+        @extend .site-link-container-border-box;
+    }
+    &__link-container {
+        @extend .site-link-container;
+    }
+    &__details {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__heading {
+        margin: 0;
+    }
+    &__icons {
+        @extend .flex-space-between-row;
+        margin: 1.25rem 0;
+    }
+    &__icon {
+        width: 4rem;
+    }
+    &__image-container {
+        position: relative;
+        height: 24rem;
+        width:  24rem;
+        @extend .flex-center-row;
+        align-items: center;
+        border: 5px solid $nitro-blue;
+    }
+    &__image-border-box {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        background-image: url(../assets/images/coldbrewbackground.png);
+        background-position: center center;
+        background-size: cover;
+        height: 24.5rem;
+        width:  24.5rem;
+        z-index: -1;
+    }
 }
-
-.were-different__details {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.were-different__heading {
-    font-size: 3.75rem;
-    font-weight: 300;
-    margin: 0;
-}
-
-.were-different__body {
-    font-size: 1.125rem;
-}
-
-.were-different__icons {
-    display: flex;
-    justify-content: space-between;
-    margin: 1.25rem 0;
-
-}
-
-.were-different__icon {
-    width: 60px;
-}
-
-.were-different__image-container {
-    /* background-image: url(../assets/images/coldbrewbackground.png);
-    background-position: center center;
-    background-size: cover; */
-    position: relative;
-    height: 24rem;
-    width:  24rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 5px solid colors.$nitro-blue;
-}
-
-.were-different__image-border-box {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    /* border: 5px solid colors.$nitro-blue; */
-    background-image: url(../assets/images/coldbrewbackground.png);
-    background-position: center center;
-    background-size: cover;
-    height: 24.5rem;
-    width:  24.5rem;
-    z-index: -1;
-}
-
 /* ############ were-different end ############# */
 
-
 /* ############ discount ############# */
-
 .discount {
     margin: 12.5rem 7.5rem;
+    &__container {
+        background-color: $neutral-graphite;
+        width: 100%;
+        @extend .flex-center-row;
+    }
+    &__details {
+        margin: 0;
+        padding: 2.5rem;
+        font-size: 2.5rem;
+        font-weight: 400;
+        color: $neutral-white;
+    } 
+    &__details--bold {
+        @extend .bold;
+    }
 }
-
-.discount__container {
-    background-color: colors.$neutral-graphite;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.discount__details {
-    margin: 0;
-    padding: 2.5rem;
-    font-size: 2.8125rem;
-    font-weight: 400;
-    color: colors.$neutral-white;
-} 
-
-.discount__details--bold {
-    font-weight: 700;
-}
-
 /* ############ discount end ############# */
-
-
-
-
-
