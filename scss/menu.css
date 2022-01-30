@@ -10,62 +10,6 @@ body {
   margin: 0;
 }
 
-.flex-center-row, .hero-with-background, .hero-with-background__heading-container, .sub-nav__list {
-  display: flex;
-  justify-content: center;
-}
-
-.flex-column {
-  display: flex;
-  flex-direction: column;
-}
-
-.flex-space-between-row, .main-footer__contents, .main-nav__list, .main-nav__brand, .main-nav {
-  display: flex;
-  justify-content: space-between;
-}
-
-.icons, .main-footer__social-media-icons, .main-nav__logo {
-  width: 3.125rem;
-}
-
-.site-link-button {
-  color: #FFF;
-  border: 2px solid #393939;
-  margin: 0;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 1rem 0.5rem;
-  font-size: 1.3125rem;
-  font-weight: 400;
-  width: 10rem;
-  text-align: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.site-link-button:active {
-  top: 5px;
-  left: 5px;
-}
-
-.site-link-container {
-  position: relative;
-  height: 4rem;
-  display: inline-block;
-}
-
-.site-link-container-border-box {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  border: none;
-  background-color: #5BACC3;
-  width: 11.25rem;
-  height: 4rem;
-}
-
 /* ############ site end ############# */
 /* ############ typography ############# */
 p {
@@ -83,21 +27,22 @@ h3 {
   font-weight: 300;
 }
 
-.bold, .main-footer__details--bold {
-  font-weight: 700;
-}
-
 /* ############ typography end ############# */
 /* ############ main-nav ############# */
 .main-nav {
   background-color: #FFF0ED;
   padding: 0.75rem 0;
+  display: flex;
+  justify-content: space-between;
   align-items: flex-end;
 }
 .main-nav__brand {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 .main-nav__logo {
+  width: 3.125rem;
   margin-left: 1.25rem;
 }
 .main-nav__heading {
@@ -109,6 +54,8 @@ h3 {
 }
 .main-nav__list {
   display: flex;
+  display: flex;
+  justify-content: space-between;
   list-style-type: none;
   padding-left: 1rem;
 }
@@ -138,6 +85,8 @@ h3 {
 }
 .main-footer__contents {
   padding: 5rem 7.5rem;
+  display: flex;
+  justify-content: space-between;
 }
 .main-footer__coffee-beans {
   position: absolute;
@@ -164,6 +113,13 @@ h3 {
 .main-footer__details {
   margin: 0;
 }
+.main-footer__details--bold {
+  font-weight: 700;
+}
+.main-footer__social-media-icons {
+  width: 3.125rem;
+}
+
 /* ############ main-footer end ############# */
 /* ############ hero-with-background ############# */
 .hero-with-background {
@@ -173,12 +129,16 @@ h3 {
   height: 37.5rem;
   width: 100%;
   text-align: center;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 .hero-with-background__heading-container {
   width: 18.75rem;
   height: 12.5rem;
   background-color: #393939;
+  display: flex;
+  justify-content: center;
   align-items: center;
   position: relative;
 }
@@ -205,6 +165,8 @@ h3 {
   background-color: #393939;
 }
 .sub-nav__list {
+  display: flex;
+  justify-content: center;
   list-style-type: none;
   font-size: 1.3125rem;
   margin: 0;

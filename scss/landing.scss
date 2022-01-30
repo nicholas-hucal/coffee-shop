@@ -1,18 +1,54 @@
 @use './partials/global' as *;
+/* ############ anchors end ############# */
+%site-link-button {
+    color: $neutral-white;
+    border: 2px solid $neutral-graphite;
+    margin: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem 0.5rem;
+    font-size: 1.3125rem;
+    font-weight: 400;
+    width: 10rem;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+%site-link-button:active {
+    top: 5px;
+    left: 5px;
+}
+%site-link-container {
+    position: relative;
+    height: 4rem;
+    display: inline-block;
+}
+%site-link-container-border-box {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border: none;
+    background-color: $nitro-blue;
+    width: 11.25rem;
+    height: 4rem;
+}
+/* ############ anchors end ############# */
+
 /* ############ hero ############# */
 .hero {
     background-color: $nitro-pink;
     padding: 2.5rem 7.5rem;
-    @extend .flex-space-between-row;
+    @include flex-space-between-row;
     flex-wrap: wrap;
     &__link-button {
-        @extend .site-link-button;
+        @extend %site-link-button;
     }
     &__link-container-border-box {
-        @extend .site-link-container-border-box;
+        @extend %site-link-container-border-box;
     }
     &__link-container {
-        @extend .site-link-container;
+        @extend %site-link-container;
     }
     &__details {
         max-width: 35%;
@@ -38,20 +74,20 @@
     margin: 0;
     padding: 3.75rem 7.5rem;
     &__link-button {
-        @extend .site-link-button;
+        @extend %site-link-button;
     }
     &__link-container-border-box {
-        @extend .site-link-container-border-box;
+        @extend %site-link-container-border-box;
     }
     &__link-container {
-        @extend .site-link-container;
+        @extend %site-link-container;
     }
     &__heading {
         text-align: center;
         margin: 0;
     }
     &__product-card-container {
-        @extend .flex-space-between-row;
+        @include flex-space-between-row;
         flex-wrap: wrap;
         margin: 2.5rem 0;
     }
@@ -59,7 +95,7 @@
         width: 30%;
         border: 1px solid #fff;
         border-radius: 10px;
-        @extend .flex-column;
+        @include flex-column;
         justify-content: flex-end;
         margin-bottom: 2.5rem;
         background-color: $neutral-white;
@@ -68,12 +104,12 @@
     }
     &__product-info {
         background-color: $nitro-pink;
-        @extend .flex-space-between-row;
+        @include flex-space-between-row;
         align-items: center;
         padding: 2.5rem 1.25rem;
     }
     &__product-details {
-        @extend .flex-column;
+        @include flex-column;
         justify-content: center;
         align-items: flex-start;
     }
@@ -88,10 +124,10 @@
         margin: 0;
         color: $nitro-blue;
         font-size: 2.0625rem;
-        @extend .bold;
+        @include bold;
     }
     &__product-image-container {
-        @extend .flex-center-row;
+        @include flex-center-row;
     }
     &__product-image {
         height: 17rem;
@@ -106,17 +142,17 @@
 
 /* ############ were-different ############# */
 .were-different {
-    @extend .flex-space-between-row;
+    @include flex-space-between-row;
     align-items: center;
     margin: 7.5rem 7.5rem 0 7.5rem;
     &__link-button {
-        @extend .site-link-button;
+        @extend %site-link-button;
     }
     &__link-container-border-box {
-        @extend .site-link-container-border-box;
+        @extend %site-link-container-border-box;
     }
     &__link-container {
-        @extend .site-link-container;
+        @extend %site-link-container;
     }
     &__details {
         width: 40%;
@@ -128,7 +164,7 @@
         margin: 0;
     }
     &__icons {
-        @extend .flex-space-between-row;
+        @include flex-space-between-row;
         margin: 1.25rem 0;
     }
     &__icon {
@@ -138,7 +174,7 @@
         position: relative;
         height: 24rem;
         width:  24rem;
-        @extend .flex-center-row;
+        @include flex-center-row;
         align-items: center;
         border: 5px solid $nitro-blue;
     }
@@ -165,7 +201,7 @@
     &__container {
         background-color: $neutral-graphite;
         width: 100%;
-        @extend .flex-center-row;
+        @include flex-center-row;
         animation: flash 2.5s infinite linear;
     }
     &__details {
@@ -176,7 +212,7 @@
         color: $neutral-white;
     } 
     &__details--bold {
-        @extend .bold;
+        @include bold;
     }
 }
 /* ############ discount end ############# */
