@@ -1,6 +1,4 @@
-# Name
-
-Coffee Shop - HTML and CSS
+# Coffee Shop
 
 ## Description
 
